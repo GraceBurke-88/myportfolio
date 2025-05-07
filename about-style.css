@@ -68,7 +68,7 @@ body {
 
 /* Buttons */
 .about-button {
-  background-color: white;
+  background-color: #f4f4f0;
   color: #1f1f1f;
   padding: 12px 24px;
   border: none;
@@ -111,4 +111,69 @@ body {
   .about-button {
     margin: 12px auto 0;
   }
+}
+
+
+
+.scroll-reveal-wrapper {
+  position: relative;
+  height: 200vh; /* Full reveal height */
+  z-index: 0;
+}
+
+/* Parallax containers */
+.container {
+  clip: rect(0, auto, auto, 0);
+  overflow: hidden;
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  left: 0;
+}
+
+.container_solid {
+  background: white;
+  top: 0;
+  z-index: 2;
+}
+
+.container_image {
+  background-image: url('images/pexels-midori-344476677-17200811.jpg'); /* update path */
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  top: 100vh;
+  z-index: 1;
+}
+
+.title_wrapper {
+  position: fixed;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  z-index: 3;
+}
+
+.title_wrapper h1 {
+  font-size: 15rem;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  background: url('images/pexels-midori-344476677-17200811.jpg') center/cover no-repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: black;
+}
+
+/* After parallax section — push content down */
+main.about-content {
+  background: white; /* <-- force a white background */
+  margin-top: 200vh;
+  padding: 80px 20px;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  z-index: 5;
 }
