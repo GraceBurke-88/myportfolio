@@ -312,19 +312,23 @@ main.hero-split {
 }
 
 .cat-btn {
-  background: #f0f5db;
-  border: 2px solid #124c2e;
-  border-radius: 12px;
-  padding: 0.6rem 1.2rem;
-  font-weight: bold;
-  color: #124c2e;
+  background: var(--matcha);
+  color: rgb(0, 0, 0);
+  padding: 12px 24px;
+  border: none;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;  /* removes underline */
+  display: inline-block;
+  transition: background 0.3s ease;
   cursor: pointer;
-  transition: background-color 0.2s ease;
 }
 
 .cat-btn:hover {
-  background-color: #e6f8d6;
+  background: var(--matcha-dark);
 }
+
 
 /* Project Cards */
 /* Intro Section */
@@ -411,10 +415,12 @@ main.hero-split {
   padding: 1.2rem;
 }
 
+
 .card-content h2 {
   font-size: 1.3rem;
   margin-bottom: 0.4rem;
   color: #124c2e;
+  text-align: center; /* <-- Add this line */
 }
 
 .card-content p {
@@ -461,6 +467,51 @@ main.hero-split {
 }
 
 
+
+.project-section h2 {
+  font-size: 2rem;
+  margin-bottom: 0.4rem;
+  color: #124c2e;
+  text-align: center; /* <-- Add this line */
+}
+
+.project-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.project-card h2{
+  font-size: 1.5rem;
+}
+
+.project-card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  flex: 1 1 300px;
+}
   
 
-  
+  html {
+  scroll-behavior: smooth;
+}
+.project-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns on wide screens */
+  gap: 2rem;
+  padding: 3rem 2rem;
+  background-color: #f7ecd9;
+}
+
+@media (max-width: 1024px) {
+  .project-gallery {
+    grid-template-columns: repeat(2, 1fr); /* 2 on tablets */
+  }
+}
+
+@media (max-width: 600px) {
+  .project-gallery {
+    grid-template-columns: 1fr; /* 1 on mobile */
+  }
+}
