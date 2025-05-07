@@ -12,16 +12,14 @@
 
   <!-- Header/Nav -->
   <header class="site-header">
-    <nav class="nav-bar">
-      <div class="logo">Grace Burke</div>
-      <ul class="nav-links">
-        <li><a href="about.html">About</a></li>
-        <li><a href="projects.html" class="active">Work</a></li>
-        <li><a href="values.html">Values</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
+    <div id="navbar"></div>
   </header>
+  
+  <script>
+    fetch('elements/navbar.html')
+      .then(res => res.text())
+      .then(data => document.getElementById('navbar').innerHTML = data);
+  </script>
 
   <!-- Intro -->
   <section class="project-intro">

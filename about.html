@@ -1,39 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-    
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>About | Grace Burke</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="about-style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
 </head>
 <body class="bold-layout">
+  <!-- Header/Nav -->
   <header class="site-header">
-    <nav class="nav-bar">
-      <div class="logo"><a href="index.html">Grace Burke</a></div>
-      <ul class="nav-links">
-        <li><a href="about.html" class="active">About</a></li>
-        <li><a href="projects.html">Work</a></li>
-        <li><a href="values.html">Values</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
+    <div id="navbar"></div>
   </header>
+  
+  <script>
+    fetch('elements/navbar.html')
+      .then(res => res.text())
+      .then(data => document.getElementById('navbar').innerHTML = data);
+  </script>
 
   <main class="about-content">
-    <section class="about-text">
-      <h1>About me</h1>
+    <div class="about-text">
+      <h1>About Me</h1>
+      <h2>UX Researcher & Designer</h2>
       <p>You know that old hoodie you always reach for? Or those Birkenstocks molded perfectly to your feet? That’s what I think good UX should feel like: simple, familiar, and made for <i>you</i>.</p>
-    <p>I’ve always been curious about how tech fits into our lives, and how it can better match the way we think, feel, and move through the world.</p>
-      <p>That curiosity led me to a Master’s in Information Systems with a UX focus. My work blends research, frontend dev, and a bit of everything in between, from VR accessibility to data mining. I’ve interviewed real users, tested ideas that didn’t work (until they did), and built projects that aim to make tech feel intuive and useful.</p>
-      <p>When I’m not designing, you’ll probably find me chasing a new 5K PR, paddling along the Jersey Shore, or enjoying a well-made cup of matcha.</p>
-
+      <p>I’ve always been curious about how tech fits into our lives, and how it can better match the way we think, feel, and move through the world.</p>
+        <p>That curiosity led me to a Master’s in Information Systems with a UX focus. My work blends research, frontend dev, and a bit of everything in between, from VR accessibility to data mining. I’ve interviewed real users, tested ideas that didn’t work (until they did), and built projects that aim to make tech feel intuive and useful.</p>
+        <p>When I’m not designing, you’ll probably find me chasing a new 5K PR, paddling along the Jersey Shore, or enjoying a well-made cup of matcha.</p>
       <div class="about-links">
         <a href="https://www.linkedin.com/in/grace-noel-burke" target="_blank" class="about-button">LinkedIn</a>
         <a href="files/Grace_Burke_Resume.pdf" target="_blank" class="about-button">View Resume</a>
       </div>
-    </section>
+    </div>
+
+    <div class="about-image">
+      <img src="images/IMG_1866.jpeg" alt="Portrait of Grace Burke">
+    </div>
   </main>
 
   <footer class="site-footer">

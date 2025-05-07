@@ -1,0 +1,115 @@
+.hero-card-layout {
+    display: flex;
+    justify-content: center;
+    padding: 100px 20px; /* slightly more height */
+    background-color: #f7ecd9;
+  }
+  
+  .hero-card {
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(14px);
+    padding: 3rem 4rem;
+    border-radius: 32px;
+    max-width: 1100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap;
+    transform: scale(1.02);
+  }
+  
+  .hero-text {
+    flex: 1;
+    min-width: 280px;
+  }
+  
+  .hero-text h1 {
+    font-size: 3.2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-tagline {
+    font-style: italic;
+    font-weight: 600;
+    font-size: 1.3rem;
+    color: #555;
+    margin-bottom: 1.2rem;
+  }
+  
+  .hero-text p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+  }
+  
+  .cta-button {
+    background-color: #7c9a4c;
+    color: white;
+    padding: 14px 30px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-decoration: none;
+    display: inline-block;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+  }
+  
+  .cta-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: #5a7234;
+    transition: left 0.4s ease;
+    z-index: 0;
+  }
+  
+  .cta-button:hover::before {
+    left: 0;
+  }
+  
+  .cta-button:hover {
+    transform: scale(1.07);
+    box-shadow: 0 12px 28px rgba(124, 154, 76, 0.3);
+  }
+  
+  .cta-button span {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .profile-illustration {
+    max-width: 320px;
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0 12px 20px rgba(0, 0, 0, 0.15));
+  }
+  
+  /* Responsive Improvements */
+  @media (max-width: 768px) {
+    .hero-card {
+      flex-direction: column;
+      text-align: center;
+      padding: 2rem;
+    }
+  
+    .hero-text h1 {
+      font-size: 2.4rem;
+    }
+  
+    .hero-text p {
+      font-size: 1.1rem;
+    }
+  
+    .profile-illustration {
+      max-width: 220px;
+    }
+  }
+  
